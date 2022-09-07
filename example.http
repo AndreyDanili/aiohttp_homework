@@ -1,0 +1,36 @@
+# примеры API-запросов
+
+@baseUrl = http://127.0.0.1:8080
+
+# создание обьявления
+POST {{baseUrl}}/advertisement/
+Content-Type: application/json
+
+{
+  "header": "Advertisement_1",
+  "description": "First idea",
+  "author": "Author_1"
+}
+
+###
+
+# получение обьявления
+GET {{baseUrl}}/advertisement/1
+Content-Type: application/json
+
+###
+
+# обновление обьявления
+
+PATCH {{baseUrl}}/advertisement/1
+Content-Type: application/json
+
+{
+  "description": "Second idea"
+}
+
+###
+
+# удаление продукта
+DELETE {{baseUrl}}/advertisement/1
+Content-Type: application/json
